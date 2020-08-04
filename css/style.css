@@ -10,7 +10,7 @@ h1,h2,h3,h4,h5,h6{
     font-family: 'Fjalla One', sans-serif;
 }
 h1{
-    font-size: 35px;
+    font-size: 2em;
     line-height: 1.5;
     letter-spacing: -.2px;
     color: white;
@@ -26,7 +26,9 @@ h2,h3,h4,h5,h6,p{
     display: flex;
     justify-content: space-between;
     height: 80px;
-    margin: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 .menu{
     height: inherit;
@@ -54,7 +56,10 @@ h2,h3,h4,h5,h6,p{
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-    margin: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding: 50px;
 }
 .hero h1{
@@ -71,7 +76,10 @@ h2,h3,h4,h5,h6,p{
 /*----------------------Portafolio-------------------*/
 .portfolio{
     background: #F0F0F0;
-    margin: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding: 40px 5%;
 }
 .portfolio h2{
@@ -113,7 +121,10 @@ h2,h3,h4,h5,h6,p{
 /*---------------------Tecnologias-------------------*/
 .tecnologies{
     background: #E7E7E7;
-    margin: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding: 1%;
     display: none;
 }
@@ -121,7 +132,10 @@ h2,h3,h4,h5,h6,p{
 /*----------------------Contacto---------------------*/
 .contact{
     background: #09092F;
-    margin: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
     padding: 40px 5%;
     color: white;
     padding: 40px 5%;
@@ -157,7 +171,10 @@ h2,h3,h4,h5,h6,p{
 
 /*---------------------Footer------------------------*/
 .footer{
-    margin: 0 5%;
+    width: 100%;
+    max-width: 1200px;
+    box-sizing: border-box;
+    margin: 0 auto;
     background: #05051C;
     color: white;
     display: flex;
