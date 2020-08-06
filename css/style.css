@@ -1,22 +1,14 @@
 *{
-    transition: 500ms all ease;
+    transition: 100ms all ease;
     margin: 0px;
 }
 body{
     font-family: 'Roboto', sans-serif;
     background: #F3FDFF;
+    font-size: 16px;
 }
 h1,h2,h3,h4,h5,h6{
     font-family: 'Fjalla One', sans-serif;
-}
-h1{
-    font-size: 2em;
-    line-height: 1.5;
-    letter-spacing: -.2px;
-    color: white;
-}
-h2,h3,h4,h5,h6,p{
-    margin: 15px 0;
 }
 
 /*-------------------Header------------------*/
@@ -25,23 +17,30 @@ h2,h3,h4,h5,h6,p{
     color: white;
     display: flex;
     justify-content: space-between;
-    height: 80px;
+    height: 5em;
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
-.menu{
+.header .logo{
     height: inherit;
 }
-.header ul{
+.header .logo img{
+    height: 100%;
+}
+.header .menu{
+    height: inherit;
+}
+.header .menu ul{
     list-style: none;
     display: flex;
     height: inherit;
+    padding: 0 0;
 }
-.header ul li{
+.header .menu ul li{
     height: inherit;
 }
-.header a{
+.header .menu ul li a{
     color: white;
     text-decoration: none;
     height: inherit;
@@ -49,28 +48,51 @@ h2,h3,h4,h5,h6,p{
     align-items: center;
     padding: 0 20px;
 }
+.burger-menu{
+    width: 2em;
+    height: 2em;
+    display: none;
+    position: fixed;
+    z-index: 4;
+    text-align: center;
+    font-size: 2em;
+    line-height: 2em;
+    background: rgba(5, 5, 70, .9);
+    border-radius: 50%;
+    top: 5px;
+    left: 5px;
+    color: white;
+}
 
 /*--------------------------Hero---------------------*/
 .hero{
     background: #09092F;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     flex-wrap: wrap;
     width: 100%;
     max-width: 1200px;
     box-sizing: border-box;
     margin: 0 auto;
-    padding: 50px;
+    padding: 2em;
 }
 .hero h1{
+    font-size: 2em;
+    line-height: 1.5;
+    letter-spacing: -.2px;
+    color: white;
     display: flex;
     align-self: center;
+    width: 100%;
+    max-width: 500px;
+    text-align: left;
+}
+.hero .hero-imageContainer{
+    width: 100%;
+    max-width: 450px;
 }
 .hero img{
     width: 100%;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
 }
 
 /*----------------------Portafolio-------------------*/
@@ -102,9 +124,29 @@ h2,h3,h4,h5,h6,p{
     max-width: 500px;
     width: 100%;
 }
+.project-title{
+    margin-bottom: 2%;
+    font-size: 1.5em;
+}
+.project-subtitle{
+    margin-bottom: 2%;
+    font-size: 1em;
+}
+.project-date{
+    margin-bottom: 2%;
+    font-size: 0.9em;
+}
+.project-url{
+    margin-bottom: 2%;
+    font-size: 1em;
+}
+.project-description{
+    font-size: 1em;
+}
 .project-imageContainer{
     max-width: 500px;
-    width: 100%;
+    width: 100%; 
+    text-align: center;
 }
 .project-imageMath{
     width: 100%;
@@ -116,7 +158,6 @@ h2,h3,h4,h5,h6,p{
     max-width: 300px;
     border-radius: 10px;
 }
-
 
 /*---------------------Tecnologias-------------------*/
 .tecnologies{
@@ -138,20 +179,24 @@ h2,h3,h4,h5,h6,p{
     margin: 0 auto;
     padding: 40px 5%;
     color: white;
-    padding: 40px 5%;
     display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
-.contact h3{
+.contact .form-email{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 500px;
+}
+.contact .form-email h3{
     color: #2A48CD;
     font-size: 25px;
     margin-top: 0;
     margin-bottom: 20px;
     text-transform: capitalize;
 }
-.form-email{
-    display: flex;
-    flex-direction: column;
-}
+
 .email-direction, .email-content{
     padding: 10px 30px;
     margin: 5px 0;
@@ -166,6 +211,27 @@ h2,h3,h4,h5,h6,p{
     border-radius: 5px;
     color: white;
     margin: 5px 0;
+}
+.contact .icons{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    max-width: 500px;
+
+}
+.contact .icons a{
+    margin-top: 1em;
+    font-size: 3em;
+    border: 1px solid white;
+    padding: 0.3em;
+    border-radius: 50%;
+    color: white;
+    text-decoration: none;
+}
+.contact .icons a:hover{
+    color: black;
+    background: white;
 }
 
 
@@ -184,6 +250,73 @@ h2,h3,h4,h5,h6,p{
 .footer p{
     display: flex;
     align-self: center;
-    font-size: 20px;
+    font-size: 16px;
     font-family: 'Fjalla One', sans-serif;
+}
+
+
+@media screen and (max-width: 1024px){
+    .hero{
+        justify-content: center;
+    }
+}
+@media screen and (max-width: 768px){
+    body{
+        font-size: 14px;
+    }
+    .header{
+        justify-content: center;
+    }
+    .burger-menu{
+        display: block;
+    }
+    .header .menu{
+        position: fixed;
+        background: rgba(5, 5, 28, .9);
+        z-index: 3;
+        top: 0;
+        left: -100vw;
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .header .menu ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 300px;
+        width: 100%;
+    }
+    .header .menu ul li{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: auto;
+        width: 100%;
+        padding: 2em 0;
+        text-align: center;
+        background: rgba(5, 5, 28, .3);
+        margin-top:2px;
+        border-radius: 20px;
+    }
+    .header .menu ul li a{
+        height: 1em;
+        text-align: center;
+        font-size: 2.5em;
+        font-family: 'Fjalla One', sans-serif;
+    }
+    .menu.is-active{
+        left: 0;
+    }
+}
+@media screen and (max-width: 480px){
+    body{
+        font-size: 12px;
+    }
+}
+@media screen and (max-width: 320px){
+
 }
