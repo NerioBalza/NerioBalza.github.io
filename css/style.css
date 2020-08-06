@@ -89,10 +89,13 @@ h1,h2,h3,h4,h5,h6{
 }
 .hero .hero-imageContainer{
     width: 100%;
-    max-width: 450px;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .hero img{
-    width: 100%;
+    width: 95%;
 }
 
 /*----------------------Portafolio-------------------*/
@@ -121,8 +124,7 @@ h1,h2,h3,h4,h5,h6{
     border-radius: 15px;
 }
 .project-details{
-    max-width: 500px;
-    width: 100%;
+    width: 50%;
 }
 .project-title{
     margin-bottom: 2%;
@@ -144,8 +146,7 @@ h1,h2,h3,h4,h5,h6{
     font-size: 1em;
 }
 .project-imageContainer{
-    max-width: 500px;
-    width: 100%; 
+    width: 50%; 
     text-align: center;
 }
 .project-imageMath{
@@ -155,8 +156,26 @@ h1,h2,h3,h4,h5,h6{
 }
 .project-imageTrap{
     width: 100%;
-    max-width: 300px;
+    max-width: 250px;
     border-radius: 10px;
+}
+.project-video{
+    width: 60%;
+    margin: 2.5% auto;
+}
+.project-videoContainer{
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+    position: relative;
+    border-radius: 25px;
+    overflow: hidden;
+}
+.project-videoContainer iframe{
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
 }
 
 /*---------------------Tecnologias-------------------*/
@@ -256,7 +275,7 @@ h1,h2,h3,h4,h5,h6{
 
 
 @media screen and (max-width: 1024px){
-    .hero{
+    .hero, .contact{
         justify-content: center;
     }
 }
@@ -310,6 +329,9 @@ h1,h2,h3,h4,h5,h6{
     }
     .menu.is-active{
         left: 0;
+    }
+    .project-details, .project-imageContainer, .project-video{
+        width: 100%;
     }
 }
 @media screen and (max-width: 480px){
