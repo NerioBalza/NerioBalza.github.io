@@ -99,7 +99,7 @@ h2{
     text-align: center;
     margin: 1.5em 0 0;
 }
-.hero img{
+.hero__imgContainer img{
     width: 60%;
 }
 /*Hero*/
@@ -319,7 +319,7 @@ h2{
         display: block;
         z-index: 3;
     }
-    .hero img{
+    .hero__imgContainer img{
         width: 70%;
     }
 }
@@ -338,12 +338,12 @@ h2{
         grid-template-areas:"logo details"
                             "info info";
     }
-    .hero img{
+    .hero__imgContainer img{
         width: 80%;
     }
 }
 @media screen and (max-width:460px){
-    .hero img{
+    .hero__imgContainer img{
         width: 90%;
     }
 }
