@@ -1,92 +1,106 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nerio Balza</title>
-    <link rel="shortcut icon" href="/images/FavIcon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/font-styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="shortcut icon" href="./images/FavIcon.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Baloo+Tamma+2:wght@400;500;600;700;800&family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/iconStyle.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <header class="header">
-        <figure class="logo">
-            <img src="images/FavIcon.png" alt="Logo" height="80">
+        <figure class="header__imgContainer">
+            <img src="images/FavIcon.png" alt="" class="header__imgContainer--img">
         </figure>
-        <i id="burger" class="icon-menu burger-menu"></i>
-        <nav class="menu" id="menu">
-            <ul>
-                <li><a class="link" href="#Portafolio">Portafolio</a></li>
-                <li><a class="link" href="#Contacto">Contactame</a></li>
+        <nav class="header__navbar" id="menu">
+            <ul class="header__navbar--list">
+                <li class=""><a href="#aboutme" class="link">Acerca de mi</a></li>
+                <li class=""><a href="#projects" class="link">Portafolio</a></li>
+                <li class=""><a href="#contact" class="link">Contacto</a></li>
             </ul>
         </nav>
+        <i class="icon-menu" id="burger"></i>
     </header>
     <section class="hero">
-        <h1>Hola! soy Nerio Balza, apasionado por la tecnologia, el desarrollo de videojuegos y muy pronto desarrollador web.</h1>
-        <figure class="hero-imageContainer">
-            <img  src="images/Hero.png" alt="">
+        <h1 class="hero__title">Bienvenido a mi sitio web, soy Nerio Balza, desarrollado web y de videojuegos.</h1>
+        <figure class="hero__imgContainer">
+            <img src="images/Hero.png" alt="">
         </figure>
     </section>
-    <section id="Portafolio" class="portfolio">
-        <h2>Portafolio (Proyectos Destacados)</h2>
-        <article class="project">
-            <div class="project-details">
-                <h3 class="project-title">Math Robots</h3>
-                <h5 class="project-subtitle">Juego para android desarrolado en Unity</h5>
-                <p class="project-date"><small><strong>Fecha:</strong> 29/10/2019</small></p>
-                <p class="project-url"><strong>Puedes verlo en <a href="https://play.google.com/store/apps/details?id=com.NerioBalza.MathRobot" target="_blank">Google Play</a></strong></p>
-                <p class="project-description">Math Robots es un videojuego educativo para niños y jovenes estudiantes que deseen mejorar sus 
-                    habilidades aritmeticas y velocidad al momento de resolver operaciones.</p>
+    <section class="aboutme" id="aboutme">
+        <h2>Acerca de mi.</h2>
+        <div class="aboutme__info">
+            <h3>
+                Hola, soy Nerio Balza. 🤘🏼
+            </h3>
+            <p class="aboutme__info--text">Me apasiona la tecnologia, el desarrollo de videojuegos y de paginas web. Hace unos años decidí aprender a programar videojuegos y desde entonces no he dejado de aprender. </p>
+            <p class="aboutme__info--text">Soy programador, desarrolador web y a veces ilustrador. Estos son algunos de los programas que utilizo en mi dia a dia:</p>
+            <div class="aboutme__info--imgContainer">
+                <img src="images/unity.png" alt="unity">
+                <img src="images/photoshop.png" alt="photoshop">
+                <img src="images/code.png" alt="visual studio code">
             </div>
-            <figure class="project-imageContainer">
-                <img class="project-imageMath" src="images/MathRobot.png" alt="Math Robot ScreenShot" width="500">
-            </figure>
-        </article>
-        <article class="project">
-            <div class="project-details">
-                <h3 class="project-title">Trap Trip</h3>
-                <h5 class="project-subtitle">Juego para android desarrolado en Unity</h5>
-                <p class="project-date"><small><strong>Fecha:</strong> en desarrollo</small></p>
-                <p class="project-url"><strong>Puedes ver un trailer en <a href="https://youtu.be/vMTcVBi21dY" target="_blank">Youtube</a></strong></p>
-                <p class="project-description">Trap Trip sera un juego de conduccion de motos en 2D, se caracteriza
-                    por un estilo grafico futurista y bases de trap en el soundtrack.
-                </p>
-            </div>
-            <figure class="project-imageContainer">
-                <img class="project-imageTrap" src="images/TrapTrip.jpg" alt="Trap Trip Flayer" width="300">
-            </figure>
-            <div class="project-video">
-                <div class="project-videoContainer">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/vMTcVBi21dY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                </div>
-            </div>
-        </article>
-    </section>
-    <section class="tecnologies">
-        <h2>Tecnologias que utilizo</h2>
-        <article>
-            <h3>Para el desarrollo de videojuegos</h3>
-            <p>Algunas de las tecnologias que uso para el desarrollo de videojuegos son: 
-                Unity, C# (lenguaje de programacion),Photoshop, Illustrator y Visual Studio
-            </p>
-        </article>
-    </section>
-    <section id="Contacto" class="contact">
-        <form action="" class="form-email">
-            <h3>¿Quieres trabajar conmigo?<br/>Escribeme un E-mail</h3>
-            <input class="email-direction" type="email" name="" id="" placeholder="Escribe tu E-mail" required>
-            <input class="email-content" type="text" name="" id="" placeholder="Escribe tu mensaje" required>
-            <input class="email-button" type="submit" value="Enviar">
-        </form>
-        <div class="icons">
-            <a class="icon-twitter" href="https://twitter.com/NerioDev" target="_blank"/a>
-            <a class="icon-instagram" href="https://instagram.com/neriodev?" target="_blank"></a>
-            <a class="icon-github" href="https://github.com/NerioBalza" target="_blank"></a>
         </div>
     </section>
+    <hr/>
+    <section class="projects" id="projects">
+        <h2>Portafolio (Proyectos Destacados).</h2>
+        <div class="project__container">        
+            <article class="project">
+                <figure class="project__logoContainer">
+                    <img src="images/LogoMR.jpg" alt="" class="project__logoContainer--logo">
+                </figure>
+                <div class="project__detailsContainer">
+                    <h3 class="project__title">Math Robots</h3>
+                    <h4 class="project__subtitle">Videojuego para Android</h4>
+                    <p class="project__date"><b>Fecha: </b>29/10/2019</p>
+                </div>
+                <div class="project__infoContainer">
+                    <p class="project__description">Math Robots es un videojuego educativo para niños y jovenes estudiantes que deseen mejorar sus habilidades aritmeticas y velocidad al momento de resolver operaciones.</p>
+                    <p class="project__source">Puedes verlo en <a href="https://play.google.com/store/apps/details?id=com.NerioBalza.MathRobot">Google Play.</a></p>
+                    <img src="images/MathRobot.png" alt="" class="project__img">
+                </div>
+            </article>
+            <article class="project">
+                <figure class="project__logoContainer">
+                    <img src="images/LogoTT.jpg" alt="" class="project__logoContainer--logo">
+                </figure>
+                <div class="project__detailsContainer">
+                    <h3 class="project__title">Trap Trip</h3>
+                    <h4 class="project__subtitle">Videojuego para Android</h4>
+                    <p class="project__date"><b>Fecha: </b>En desarrollo</p>
+                </div>
+                <div class="project__infoContainer">
+                    <p class="project__description">Trap Trip sera un juego de conduccion de motos en 2D, se caracteriza por un estilo grafico futurista y bases de trap en el soundtrack.</p>
+                    <p class="project__source">Puedes ver el trailer en <a href="https://youtu.be/vMTcVBi21dY">YouTube.</a></p> 
+                    <img src="images/TrapTrip.png" alt="" class="project__img">
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <h2>Contáctame.</h2>
+        <div class="contact__container">
+            <div class="contact__whatsapp">
+                <h3>Quieres trabajar conmigo? puedes contactarme por estos medios:</h3>
+                <p><i class="icon-whatsapp"></i> Whatsapp: (+58) 424 7319042</p>
+                <p><i class="icon-mail"></i> Email: neriojbd@gmail.com</p>
+            </div>
+            <div class="contact__socialMedia">
+                <a href="https://instagram.com/nerioj25?" target="blank" class="icon-instagram icons"></a>
+                <a href="https://twitter.com/NerioDev" target="blank" class="icon-twitter icons"></a>
+                <a href="https://github.com/NerioBalza" target="blank" class="icon-github icons"></a>
+            </div>
+        </div>
+    </section>
+
     <footer class="footer">
-        <p>Pagina creada por: Nerio Balza 2020 ❤</p>
+        <p>Pagina web creada por: Nerio Balza 2020 🤘🏼</p>
+        <p>Mérida, Venezuela. </p>
     </footer>
     <script src="js/app.js"></script>
 </body>

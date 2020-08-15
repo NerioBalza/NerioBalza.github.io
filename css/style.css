@@ -1,307 +1,293 @@
+/* 
+Fuentes y Colores:
+
+font-family: 'Fjalla One', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Baloo Tamma 2', cursive;
+font-family: 'Roboto Condensed', sans-serif;
+
+background: #05051C;
+background: #09092F;
+background: #F0F0F0;
+ */
+
+
+/*General*/
 *{
-    transition: 100ms all ease;
-    margin: 0px;
+    margin: 0;
+    padding: 0;
+    transition: 100ms;
 }
 body{
-    font-family: 'Roboto', sans-serif;
-    background: #F3FDFF;
     font-size: 16px;
+    font-family: 'Roboto Condensed', sans-serif;
 }
-h1,h2,h3,h4,h5,h6{
+h2{
+    font-size: 2em;
     font-family: 'Fjalla One', sans-serif;
+    color: #64D869;
+    grid-column-end: span 2;
 }
+/*General*/
 
-/*-------------------Header------------------*/
+
+/*Header*/
 .header{
+    height: 5em;
     background: #05051C;
-    color: white;
     display: flex;
     justify-content: space-between;
-    height: 5em;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
+    padding: 0 1.5em ;
 }
-.header .logo{
+.header__imgContainer{
     height: inherit;
 }
-.header .logo img{
-    height: 100%;
-}
-.header .menu{
+.header__imgContainer img{
     height: inherit;
 }
-.header .menu ul{
+.header__navbar{
+    height: inherit;    
+}
+.header__navbar--list{
     list-style: none;
     display: flex;
     height: inherit;
-    padding: 0 0;
 }
-.header .menu ul li{
-    height: inherit;
+.header__navbar--list li{
+    margin: 0 0 0 2em;
+    align-self: center;
 }
-.header .menu ul li a{
+.header__navbar--list li a{
+    font-size: 1.2em;
     color: white;
     text-decoration: none;
-    height: inherit;
-    display: flex;
-    align-items: center;
-    padding: 0 20px;
+    font-weight: 500;
 }
-.burger-menu{
-    width: 2em;
-    height: 2em;
+.header__navbar--list li a:hover{
+    text-decoration: underline;
+}
+.icon-menu{
     display: none;
     position: fixed;
-    z-index: 4;
-    text-align: center;
     font-size: 2em;
-    line-height: 2em;
-    background: rgba(5, 5, 70, .9);
-    border-radius: 50%;
-    top: 5px;
-    left: 5px;
     color: white;
+    padding: 0.3em;
+    border-radius: 50%;
+    right: 0.4em;
+    top: 0.4em;
+    background: rgba(5, 5, 50, .9);
 }
+/*Header*/
 
-/*--------------------------Hero---------------------*/
+
+/*Hero*/
 .hero{
     background: #09092F;
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 2em;
-}
-.hero h1{
-    font-size: 2em;
-    line-height: 1.5;
-    letter-spacing: -.2px;
-    color: white;
-    display: flex;
-    align-self: center;
-    width: 100%;
-    max-width: 500px;
-    text-align: left;
-}
-.hero .hero-imageContainer{
-    width: 100%;
-    max-width: 400px;
-    display: flex;
-    align-items: center;
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: minmax(300px, 800px);
     justify-content: center;
 }
-.hero img{
-    width: 95%;
-}
-
-/*----------------------Portafolio-------------------*/
-.portfolio{
-    background: #F0F0F0;
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 40px 5%;
-}
-.portfolio h2{
-    color: #2A48CD;
-    margin-top: 0;
-    margin-bottom: 40px;
-    text-transform: uppercase;
-}
-.project{
-    background: white;
-    border: 1px solid #C3C3C3;
-    margin: 10px 0;
-    padding: 20px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    border-radius: 15px;
-}
-.project-details{
-    width: 50%;
-}
-.project-title{
-    margin-bottom: 2%;
-    font-size: 1.5em;
-}
-.project-subtitle{
-    margin-bottom: 2%;
-    font-size: 1em;
-}
-.project-date{
-    margin-bottom: 2%;
-    font-size: 0.9em;
-}
-.project-url{
-    margin-bottom: 2%;
-    font-size: 1em;
-}
-.project-description{
-    font-size: 1em;
-}
-.project-imageContainer{
-    width: 50%; 
+.hero__title{
+    font-size: 3em;
+    font-family: 'Fjalla One', sans-serif;
+    color: white;
     text-align: center;
 }
-.project-imageMath{
+.hero__imgContainer{
     width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
+    text-align: center;
+    margin: 1.5em 0 0;
 }
-.project-imageTrap{
-    width: 100%;
-    max-width: 250px;
-    border-radius: 10px;
-}
-.project-video{
+.hero img{
     width: 60%;
-    margin: 2.5% auto;
+    min-width: 400px;
 }
-.project-videoContainer{
-    width: 100%;
-    height: 0;
-    padding-top: 56.25%;
-    position: relative;
-    border-radius: 25px;
-    overflow: hidden;
-}
-.project-videoContainer iframe{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-}
+/*Hero*/
 
-/*---------------------Tecnologias-------------------*/
-.tecnologies{
-    background: #E7E7E7;
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 1%;
-    display: none;
-}
 
-/*----------------------Contacto---------------------*/
+/*Aboutme*/
+.aboutme{
+    background: #F0F0F0;
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em 0;
+}
+.aboutme__info{
+    display: grid;
+    grid-template-columns: minmax(300px, 800px);
+    justify-content: center;
+}
+.aboutme__info h3{
+    font-size: 2.5em;
+    font-family: 'Fjalla One', sans-serif;
+}
+.aboutme__info--text{
+    margin: .5em 0;
+    font-size: 1.5em;
+}
+.aboutme__info--imgContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.aboutme__info--imgContainer img{
+    width: 6em;
+    margin-top: 2em;
+}
+/*Aboutme*/
+
+
+/*Proyectos*/
+.projects{
+    background: #F0F0F0;
+    padding: 1.5em;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5em 0;
+}
+.project{
+    padding: 1.5em;
+    background: white;
+    border: 2px solid #c2c2c2;
+    border-radius: 1em;
+    display: grid;
+    grid-template-areas:"logo details"
+                        ". info";
+    gap: .5em 1em;
+}
+.project__container{
+    display: grid;
+    grid-template-columns: repeat(2, minmax(500px, 600px));
+    gap: 1.5em 1em;
+    justify-content: center;
+}
+.project__logoContainer{
+    grid-area: logo;
+    width: 7em;
+    height: 7em;
+}
+.project__detailsContainer{
+    grid-area: details;
+    font-family: 'Fjalla One', sans-serif;
+}
+.project__infoContainer{
+    grid-area: info;
+    display: grid;
+}
+.project__logoContainer--logo{
+    width: 100%;
+    border-radius: 50%;
+}
+.project__title{
+    font-size: 1.5em;
+}
+.project__subtitle{
+    font-size: 1em;
+    margin: 1em 0;
+}
+.project__date{
+    font-size: 0.8em;
+}
+.project__source{
+    font-size: 1em;
+    margin: 1em 0;
+}
+.project__description{
+    font-size: 1em;
+    font-weight: 400;
+}
+.project__img{
+    width: 100%;
+    border-radius: 1em;
+}
+/*Proyectos*/
+
+
+/*Contacto*/
 .contact{
     background: #09092F;
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;
-    margin: 0 auto;
-    padding: 40px 5%;
+    padding: 1.5em;
     color: white;
+}
+.contact__container{
+    display: grid;
+    grid-template-columns: minmax(200px, 600px);
+    gap: 1.5em 0;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+.contact__whatsapp h3{
+    font-size: 2em;
+}
+.contact__whatsapp p{
+    font-size: 1.2em;
+    margin: 1em 0;
+}
+.contact__whatsapp i{
+    font-size: 1.5em;
+    color: #64D869;
+}
+.contact__socialMedia{
     display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-}
-.contact .form-email{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    max-width: 500px;
-}
-.contact .form-email h3{
-    color: #2A48CD;
-    font-size: 25px;
-    margin-top: 0;
-    margin-bottom: 20px;
-    text-transform: capitalize;
-}
-
-.email-direction, .email-content{
-    padding: 10px 30px;
-    margin: 5px 0;
-    border-radius: 5px;
-    border-style: solid;
-}
-.email-button{
-    padding: 10px;
-    width: 120px;
-    background-color: transparent;
-    border-style: solid;
-    border-radius: 5px;
-    color: white;
-    margin: 5px 0;
-}
-.contact .icons{
-    display: flex;
-    align-items: center;
     justify-content: space-around;
-    width: 100%;
-    max-width: 500px;
-
+    align-items: center;
 }
-.contact .icons a{
-    margin-top: 1em;
-    font-size: 3em;
-    border: 1px solid white;
-    padding: 0.3em;
+.icons{
+    font-size: 2.5em;
+    padding: .4em;
+    border: 2px solid white;
     border-radius: 50%;
     color: white;
     text-decoration: none;
 }
-.contact .icons a:hover{
-    color: black;
+.icons:hover {
+    color: #09092F;
     background: white;
 }
+/*Contacto*/
 
 
-/*---------------------Footer------------------------*/
+/*Footer*/
 .footer{
-    width: 100%;
-    max-width: 1200px;
-    box-sizing: border-box;
-    margin: 0 auto;
     background: #05051C;
     color: white;
+    font-family: 'Fjalla One', sans-serif;
+    height: 6em;
     display: flex;
     justify-content: center;
-    height: 100px;
+    align-items: center;
+    padding: 1.5em;
+    flex-wrap: wrap;
 }
-.footer p{
-    display: flex;
-    align-self: center;
-    font-size: 16px;
-    font-family: 'Fjalla One', sans-serif;
-}
+/*Footer*/
 
 
-@media screen and (max-width: 1024px){
-    .hero, .contact{
-        justify-content: center;
+/*MediaQuery*/
+@media screen and (max-width:1080px){
+    .project__container{
+        grid-template-columns: minmax(500px, 600px);
     }
 }
 @media screen and (max-width: 768px){
-    body{
-        font-size: 14px;
-    }
     .header{
         justify-content: center;
     }
-    .burger-menu{
-        display: block;
-    }
-    .header .menu{
+    .header__navbar{
         position: fixed;
         background: rgba(5, 5, 28, .9);
-        z-index: 3;
+        z-index: 2;
         top: 0;
-        left: -100vw;
+        right: -100vw;
         height: 100vh;
         width: 100vw;
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 500ms;
     }
-    .header .menu ul{
+    .header__navbar--list{
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -309,7 +295,7 @@ h1,h2,h3,h4,h5,h6{
         height: 300px;
         width: 100%;
     }
-    .header .menu ul li{
+    .header__navbar--list li{
         display: flex;
         justify-content: center;
         align-items: center;
@@ -320,25 +306,40 @@ h1,h2,h3,h4,h5,h6{
         background: rgba(5, 5, 28, .3);
         margin-top:2px;
         border-radius: 20px;
-    }
-    .header .menu ul li a{
+    } 
+    .header__navbar--list li a{
         height: 1em;
         text-align: center;
-        font-size: 2.5em;
+        font-size: 2em;
         font-family: 'Fjalla One', sans-serif;
     }
-    .menu.is-active{
-        left: 0;
+    .is-active{
+        right: 0;
     }
-    .project-details, .project-imageContainer, .project-video{
-        width: 100%;
+    .icon-menu{
+        display: block;
+        z-index: 3;
     }
 }
-@media screen and (max-width: 480px){
+@media screen and (max-width: 550px){
     body{
-        font-size: 12px;
+        font-size: 14px;
+    }
+    .hero__title{
+        text-align: left;
+    }
+    .project__container{
+        grid-template-columns: 1fr;
+    }
+    .project{
+        grid-template-columns: 7em 1fr;
+        grid-template-areas:"logo details"
+                            "info info";
     }
 }
-@media screen and (max-width: 320px){
+@media screen and (max-width:460px){
+
+}
+@media screen and (max-width:320px){
 
 }
